@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () =>{
     return (
         <>
-        <nav class="bg-orange-400">
+        <nav class="bg-grey-100">
           <div className="max-w-7xl mx-auto  px-8">
             <div className="flex justify-between">
               
@@ -41,7 +41,7 @@ const Navbar = () =>{
     
         {/* Main Content goes here */}
           <div className = "py-32 text-center">
-            <h2 className = "font-extrabold text-4xl">Welcome to Devhub</h2>
+            <h2 className = "font-extrabold text-4xl">Welcome to CANDY SHOP</h2>
           </div>
     
         </>
