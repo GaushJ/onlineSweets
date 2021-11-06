@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.sliderImage{
+    width:50vw;
+    height:1000vh;
+    border-radius: 20px;
+}
+.slider-wrapper {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+  }
