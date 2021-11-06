@@ -1,12 +1,12 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const DB = "mongodb+srv://Gauransh:Gauransh123@cluster0.8wqm6.mongodb.net/sweetshop?retryWrites=true&w=majority"
+const dotenv = require('dotenv');
 
-mongoose.connect(DB).then(()=>{
-    console.log("connected to database succesully")
-}).catch((err)=>{
-    console.log('connection failed');
-});
+dotenv.config({path:'./config.env'});
+require('./db/database');
+
+const PORT = process.env.PORT;
+
+
 
 const app = express();
 
@@ -24,5 +24,5 @@ app.get('/signin',(req,res)=>{
 });
 
 app.listen(3000,()=>{
-    console.log('connected successfully at port 3000');
+    console.log(`connected successfully at port ${PORT}`);
 })
