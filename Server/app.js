@@ -1,14 +1,17 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const app = express();
 
 dotenv.config({path:'./config.env'});
 require('./db/database');
+// const User = require('./models/userSchema');
+// app.use(express.json()); 
 
 const PORT = process.env.PORT;
 
+app.use(require('./router/auth'));
 
 
-const app = express();
 
 app.get('/',(req,res)=>{
     res.send('Welcome to Home');
