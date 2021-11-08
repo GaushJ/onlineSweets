@@ -39,10 +39,7 @@ const Navbar = () =>{
         </nav>
     
     
-        {/* Main Content goes here */}
-          <div className = "py-32 text-center">
-            <h2 className = "font-extrabold text-4xl">Welcome to CANDY SHOP</h2>
-          </div>
+        
     
         </>
       );

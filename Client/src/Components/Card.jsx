@@ -4,8 +4,8 @@ import IMAGES from './Images/Images'
 
 const Card = (props)=>{
     return(
-        <div class="flex flex-col w-1/5">
-        <div className=" bg-green-200 rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+        <div class="flex flex-col w-1/5 m-28">
+        <div className=" bg-white-200 rounded-none shadow-lg border-2 border-black overflow-hidden flex flex-col justify-center items-center">
             <div>
                 <img className="object-center object-cover h-auto " src={IMAGES.Image3} alt="photo" />
             </div>
