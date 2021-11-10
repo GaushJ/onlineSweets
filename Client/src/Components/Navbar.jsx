@@ -20,7 +20,7 @@ const Navbar = () =>{
         
         
                       {/* Primary nav */}
-                    <div className=" hidden md:flex py-6 px-2 ">
+                    <div className="  hidden md:block md:flex py-6 px-2 ">
                       <a href="" className=" py-2 px-2 mr-9 text-gray-700 font-medium  text-lg hover:text-blue-600">Home</a>
                       <a href="" className=" py-2 px-2 mr-3 text-gray-700 font-medium text-lg hover:text-blue-600">Projects</a>
                     </div>
@@ -28,7 +28,7 @@ const Navbar = () =>{
     
     
               {/* secondary Nav */}
-              <div className = "hidden md:flex items-center space-x-3 ">
+              <div className = " hidden md:block md:flex items-center space-x-3 ">
                 <a href="" className=" font-medium text-lg hover:text-blue-600">Login</a>
                 <a href="" className="py-3 px-3 bg-green-400 font-medium text-large text-gray-900 rounded hover:bg-green-300 transition duration-300">Sign up</a>
               </div>

@@ -26,6 +26,7 @@ app.get('/about',(req,res)=>{
     res.send('Welcome to about ');
 });
 app.get('/sweets',(req,res)=>{
+    res.cookie("test","gau");
     res.send('Welcome to sweets');
 });
 app.get('/signin',(req,res)=>{

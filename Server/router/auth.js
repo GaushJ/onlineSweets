@@ -9,6 +9,7 @@ const User = require("../models/userSchema")
 
 router.get('/',(req,res)=>{
     res.send('Hello from server router');
+    res.cookie("jwttoken" ,"start");
 });
 
 router.post('/register',async (req,res)=>{
@@ -40,27 +41,25 @@ router.post('/register',async (req,res)=>{
 });
 router.post('/login',async (req,res)=>{
     //  console.log(req.body);  
-    const {email,password} = req.body;
+    res.cookie("jwttoken" ,"start");
+   
+    try{
+        const {email,password} = req.body;
     if( !email ||  !password ) {
         return res.status(422).json({error:"Plz fill the field properly"})
     }
-   
-    try{
-        User.findOne({email:email})
-        const userExist = await User.findOne({email:email});
-        const passwordMatch = await bcrypt.compare(password,userExist.password);
-        const token = await userExist.generateAuthToken(); 
-        console.log(token);   
         
-        if(userExist){
-                if(!passwordMatch){
-                    return res.status(201).json({error:"invalid Credentials"});
-                }else{
-                    res.json({message:"user Logged in successfully"});
-                }
-            }else{
-                return res.status(201).json({error:"invalid Credentials"});
-            }
+        const userExist = await User.findOne({email:email});
+        const isMatch = await bcrypt.compare(password,userExist.password);
+        const token = await userExist.generateAuthToken();
+        console.log(token);
+        
+        if(isMatch){
+        return res.status(201).json({message:"logged in successfully"});
+        }else{
+        res.json({error:"invalid credentials"});
+        }
+    
             
            
             
