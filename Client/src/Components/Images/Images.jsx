@@ -8,5 +8,7 @@ const IMAGES = {
     Image7:require('./image7.jpg').default,
     Image8:require('./image8.jpg').default,
     Image9:require('./image9.jpg').default,
+    logo:require('./logo.png').default,
+    
 }
 export default IMAGES;
