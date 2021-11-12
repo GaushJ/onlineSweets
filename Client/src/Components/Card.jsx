@@ -1,13 +1,13 @@
 import {React} from 'react'
-import IMAGES from './Images/Images'
+
 
 
 const Card = (props)=>{
     return(
-        <div class="flex flex-col w-1/5">
-        <div className=" bg-green-200 rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+    <div className=" flex flex-col  sm:w-96 sm:m-auto sm:my-10 ">
+        <div className=" bg-white mx-12 w-72 rounded-lg shadow-lg border-2  overflow-hidden flex flex-col  ">
             <div>
-                <img className="object-center object-cover h-auto " src={IMAGES.Image3} alt="photo" />
+                <img className="object-center object-cover w-full h-72 " src={props.image} alt="photo"  />
             </div>
             <div className="text-center py-8 sm:py-6">
                 <p className="text-xl text-gray-700 font-bold mb-2">{props.name}</p>
