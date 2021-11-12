@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 
 const Login = () => {
     const handleFormSubmit = (e) => {
@@ -38,13 +39,21 @@ const Login = () => {
 
                     <div className='flex justify-center items-center mt-6'>
                         <button
-                            className={`bg-green py-2 px-4 text-sm text-black hover:bg-red-400 rounded border border-green focus:outline-none focus:border-green-dark`}
+                            className={`bg-green py-2 px-4 text-sm text-white transition duration-300 font-medium hover:bg-red-500 bg-red-400 rounded border border-green focus:outline-none focus:border-green-dark`}
                         >
                             Login
                         </button>
                     </div>
                 </form>
+                <div className="mt-6 text-center">
+                    New Here?  
+                    <NavLink className="no-underline ml-2 border-b border-blue text-blue-500" to="../Signup/" >
+                        Sign up
+                    .</NavLink>
+                </div>
+               
             </div>
+            
         </div>
     );
 };

@@ -1,7 +1,5 @@
 import React from 'react'
 import Navbar from './Navbar'
-import Card from './Card'
-import Carousal from './Carousal'
 import {Route} from 'react-router-dom'
 import Signup from './Signup'
 import Home from './Home'
@@ -9,7 +7,8 @@ import About from './About'
 import Bestsellers from './Bestsellers'
 import Contact from './Contact'
 import Login from './login'
-import IMAGES from './Images/Images'
+import Footer from './Footer'
+
 
 
 
@@ -49,6 +48,7 @@ function App() {
       <Login/>
     </Route> 
     
+    <Footer />
      
 
  

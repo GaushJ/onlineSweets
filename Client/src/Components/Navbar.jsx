@@ -17,7 +17,7 @@ function Navbar() {
                 <NavLink to="/">
                 <img
                   className="h-full w-40 "
-                  src={IMAGES.logo}
+                  // src={IMAGES.logo}
                   alt="Workflow"
                 />
                 </NavLink>
