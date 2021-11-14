@@ -12,6 +12,8 @@ router.get('/',(req,res)=>{
     res.cookie("jwttoken" ,"start");
 });
 
+//Registering the account
+
 router.post('/register',async (req,res)=>{
     //  console.log(req.body);  
     const {name,email,phone,password,cpassword} = req.body;
@@ -44,26 +46,28 @@ router.post('/login',async (req,res)=>{
     res.cookie("jwttoken" ,"start");
    
     try{
+        let token;
         const {email,password} = req.body;
     if( !email ||  !password ) {
-        return res.status(422).json({error:"Plz fill the field properly"})
+        return res.status(400).json({error:"Plz fill the field properly"})
     }
         
         const userExist = await User.findOne({email:email});
-        const isMatch = await bcrypt.compare(password,userExist.password);
-        const token = await userExist.generateAuthToken();
+        if(userExist){
+            const isMatch = await bcrypt.compare(password,userExist.password);
+         token = await userExist.generateAuthToken();
         console.log(token);
-        
-        if(isMatch){
-        return res.status(201).json({message:"logged in successfully"});
-        }else{
-        res.json({error:"invalid credentials"});
+
+        res.cookie("jwtoken",token,{
+            expires:new Date(Date.now()+25892000000),
+            httpOnly:true
+        });
+        if(!isMatch){
+             res.status(400).json({message:"Invalid credentials"});
+            }else{
+            res.json({message:"user Logged in seccessfully"});
+            }
         }
-    
-            
-           
-            
-             
            
     }catch(err){
             console.log(err);
