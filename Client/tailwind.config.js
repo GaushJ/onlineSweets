@@ -19,7 +19,12 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
       },
       extend: {
+        backgroundImage: {
+          'signup-image': "url('/src/Components/Images/signin.jpg')",
+          
+         },
         colors:{
+         
             orange:{
                 400:'#ffa500',
                 800:'#ff8c00',

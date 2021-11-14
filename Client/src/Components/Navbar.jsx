@@ -17,7 +17,7 @@ function Navbar() {
                 <NavLink to="/">
                 <img
                   className="h-full w-40 "
-                  src={IMAGES.logo}
+                  // src={IMAGES.logo}
                   alt="Workflow"
                 />
                 </NavLink>
@@ -29,26 +29,26 @@ function Navbar() {
 
                   <NavLink
                     to="/"
-                    className="text-gray-800 hover:bg-purple-600 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
+                    className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
                   >
                     Home
                   </NavLink>
 
                   <NavLink
                     to="/bestsellers"
-                    className="text-gray-800 hover:bg-purple-600 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
+                    className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
                   >
                     Best Sellers
                   </NavLink>
                   <NavLink
                     to="/about"
-                    className="text-gray-800 hover:bg-purple-600 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
+                    className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
                   >
                     About us
                   </NavLink>
                   <NavLink
                     to="/contact"
-                    className="text-gray-800 hover:bg-purple-600 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
+                    className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
                   >
                     Contact us
                   </NavLink>
@@ -60,8 +60,8 @@ function Navbar() {
               
             </div>
             <div className = " hidden  md:flex items-center space-x-3 mt-6 ">
-                <NavLink to="/login" className=" font-medium text-lg hover:text-blue-600">Login</NavLink>
-                <NavLink to="/signup" className="py-3 px-3 bg-green-400 font-medium text-large text-gray-900 rounded hover:bg-green-300 transition duration-300">Sign up</NavLink>
+                <NavLink to="/login" className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg">Login</NavLink>
+                <NavLink to="/signup" className="py-3 px-3  font-medium text-lg  rounded text-white bg-red-500 hover:bg-red-400 hover:text-white  transition duration-300">Sign up</NavLink>
               </div>
             <div className="-mr-2 flex md:hidden">
               <button

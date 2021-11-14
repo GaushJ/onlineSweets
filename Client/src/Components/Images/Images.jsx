@@ -9,6 +9,7 @@ const IMAGES = {
     Image8:require('./image8.jpg').default,
     Image9:require('./image9.jpg').default,
     logo:require('./logo.png').default,
+    veg:require('./veg.png').default,
     
 }
 export default IMAGES;
