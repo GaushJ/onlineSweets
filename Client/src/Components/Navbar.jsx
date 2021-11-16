@@ -34,12 +34,7 @@ function Navbar() {
                     Home
                   </NavLink>
 
-                  <NavLink
-                    to="/bestsellers"
-                    className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
-                  >
-                    Best Sellers
-                  </NavLink>
+                  
                   <NavLink
                     to="/about"
                     className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"

@@ -11,11 +11,11 @@ const Card = (props)=>{
                 <img className="object-center md:h-48 lg:h-48 lg:w-96 md:w-96 object-cover sm:w-60 w-full h-72 " src={props.image} alt="photo"  />
             </div>
             <div className="m-2 flex flex-row justify-start ">
-                    <img src={IMAGES.veg} height="15px" width="20px"/>
+                    <img src={IMAGES.veg} className="w-3 h-3"/>
                     <div className="text-xl text-black font-medium ml-2 ">{props.name}</div>
             </div>
             
-                <div className=" flex flex-row justify-around content-end">
+                <div className=" flex flex-row justify-around">
                     
                     <div className=" text-xl text-black font-normal">{props.price}</div>
                     <button className="cursor-pointer  w-20 h-8 rounded-xl font-medium bg-red-400 hover:bg-red-500 text-white transition duration-300 ">
