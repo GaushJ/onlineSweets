@@ -2,11 +2,12 @@ import React from 'react'
 
 const Contact = ()=>{
     return(
-        <form className=" mx-auto w-full max-w-7xl container shadow-md m-10">
+        <form className=" mx-auto  max-w-7xl container shadow-md m-10">
           <h1 className="text-center text-3xl font-medium m-6">Get in Touch</h1>
+          <div className="mx-10">
   <div className="flex flex-wrap -mx-3 mb-6 ">
     
-    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 ">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
         First Name
       </label>
@@ -40,11 +41,12 @@ const Contact = ()=>{
   </div>
   <div className="md:flex md:items-center">
     <div className="md:w-1/3">
-      <button className="shadow bg-green-400 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+      <button className="shadow bg-green-400 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mb-6" type="button">
         Send
       </button>
     </div>
     <div className="md:w-2/3"></div>
+  </div>
   </div>
 </form>
     )
