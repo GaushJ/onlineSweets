@@ -1,11 +1,19 @@
+
 const express = require('express');
 const router = express.Router();
+const authenticate = require("../middleware/authenticate");
+
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+
+
+
 
 
 require('../db/database');
+
+
 const User = require("../models/userSchema")
+
 
 router.get('/',(req,res)=>{
     res.send('Hello from server router');
@@ -22,7 +30,7 @@ router.post('/register',async (req,res)=>{
     }
    
     try{
-        User.findOne({email:email})
+        
         const userExist = await User.findOne({email:email});
              if(userExist){
                 return res.status(422).json({error:"Email already Exist"});
@@ -43,7 +51,7 @@ router.post('/register',async (req,res)=>{
 });
 router.post('/login',async (req,res)=>{
     //  console.log(req.body);  
-    res.cookie("jwttoken" ,"start");
+    
    
     try{
         let token;
@@ -62,6 +70,13 @@ router.post('/login',async (req,res)=>{
             expires:new Date(Date.now()+25892000000),
             httpOnly:true
         });
+
+        //creating a session
+        
+
+
+
+
         if(!isMatch){
              res.status(400).json({message:"Invalid credentials"});
             }else{
@@ -74,4 +89,12 @@ router.post('/login',async (req,res)=>{
     }
    
 });
+
+
+router.get('/cart',authenticate,(req,res)=>{
+    
+    
+    
+});
+
 module.exports = router;
