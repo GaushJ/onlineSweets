@@ -1,34 +1,20 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const app = express();
+const cookieparser = require('cookie-parser') ;
 
 dotenv.config({path:'./config.env'});
 require('./db/database');
-// const User = require('./models/userSchema');
+app.use(cookieparser());
 app.use(express.json()); 
-
-const PORT = process.env.PORT;
-
 app.use(require('./router/auth'));
 
-//Middleware
-const middleware = (req,res,next)=>{
-    console.log('hello middleware');
-    next();
-}
-
-
+const PORT = process.env.PORT;
 
 app.get('/',(req,res)=>{
     res.send('Welcome to Home');
 });
-app.get('/about',(req,res)=>{
-    res.send('Welcome to about ');
-});
-app.get('/sweets',(req,res)=>{
-    res.cookie("test","gau");
-    res.send('Welcome to sweets');
-});
+
 app.get('/signin',(req,res)=>{
     res.send('Welcome to signin');
 });
@@ -36,3 +22,13 @@ app.get('/signin',(req,res)=>{
 app.listen(5000,()=>{
     console.log(`connected successfully at port ${PORT}`);
 })
+
+
+
+
+
+
+
+
+
+

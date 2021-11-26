@@ -42,6 +42,12 @@ function Navbar() {
                     About us
                   </NavLink>
                   <NavLink
+                    to="/cart"
+                    className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
+                  >
+                    Cart
+                  </NavLink>
+                  <NavLink
                     to="/contact"
                     className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
                   >
@@ -118,7 +124,7 @@ function Navbar() {
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <NavLink
-                  to="#"
+                  to="/"
                   className="hover:bg-purple-500 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Home
@@ -127,24 +133,24 @@ function Navbar() {
                
 
                 <NavLink
-                  to="#"
+                  to="/about"
                   className="text-black hover:bg-purple-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Best Sellers
+                  About us
                 </NavLink>
 
                 <NavLink
-                  to="#"
+                  to="/cart"
                   className="text-black  hover:bg-purple-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Sign up
+                  Cart
                 </NavLink>
 
                 <NavLink
-                  to="#"
+                  to="/contact"
                   className="text-black  hover:bg-purple-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Sign In
+                  Contact us
                 </NavLink>
                 
               </div>

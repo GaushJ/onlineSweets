@@ -8,6 +8,7 @@ import Bestsellers from './Bestsellers'
 import Contact from './Contact'
 import Login from './login'
 import Footer from './Footer'
+import Cart from './Cart'
 
 
 
@@ -31,6 +32,10 @@ function App() {
     
     <Route path="/about">
       <About />
+    </Route>
+
+    <Route path="/cart">
+      <Cart/>
     </Route>
 
     <Route path="/Bestsellers">
