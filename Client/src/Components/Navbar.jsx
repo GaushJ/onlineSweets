@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import IMAGES from "./Images/Images";
 import {NavLink} from 'react-router-dom'
 
 function Navbar() {
@@ -15,11 +14,7 @@ function Navbar() {
             <div className="flex items-center mt-6">
               <div className="flex-shrink-0 ">
                 <NavLink to="/">
-                <img
-                  className="h-full w-40 "
-                  // src={IMAGES.logo}
-                  alt="Workflow"
-                />
+                ABC Sweets
                 </NavLink>
                 
               </div>

@@ -10,6 +10,7 @@ const CardTray = () =>{
            name = {val.Name}
            price = {val.Price}
            image = {val.Image}
+           description = {val.Description}
           />
         )
       };

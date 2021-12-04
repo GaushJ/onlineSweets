@@ -23,6 +23,11 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    isAdmin: {
+        type: Boolean,
+        default: false,
+      },
+      
     tokens:[
         {
             token:{
@@ -31,7 +36,9 @@ const userSchema = new mongoose.Schema({
             }
         }
     ]
-});
+    
+},
+{ timestamps: true });
 
 //generating the token
 userSchema.methods.generateAuthToken = async function(){
