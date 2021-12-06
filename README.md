@@ -1,4 +1,4 @@
-**What is needed to add and how I will be doing it ?**
+**What is  to be added and how will I be doing it ?**
 > The Cart is needed to be implemented along with the state which I will be doing using Redux library , The cart has been made in the code base but yet to be implemented using react router.
 >
 **Bugs to be noted and  how I am gonna fix it**
