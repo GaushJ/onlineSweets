@@ -7,6 +7,7 @@ const CardTray = () =>{
     const Scard = (val) =>{
         return(
           <Card 
+          link={val.link}
            name = {val.Name}
            price = {val.Price}
            image = {val.Image}

@@ -9,6 +9,7 @@ const IMAGES = {
     Image8:require('./image8.jpg').default,
     Image9:require('./image9.jpg').default,
     logo:require('./logo.png').default,
+    logo1:require('./logo1.png').default,
     veg:require('./veg.png').default,
     gulabjamun:require('./gulabjamun.jpg').default,
     chamcham:require('./cham_cham.jpg').default,
@@ -17,6 +18,7 @@ const IMAGES = {
     rasgulla:require('./rasgulla.jpg').default,
     kaju_katli:require('./kaju_katli.jpg').default,
     shahidodha:require('./shahidodha.jpg').default,
+    motto:require('./motto.jpg').default,
     
 }
 export default IMAGES;
