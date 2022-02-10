@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import {NavLink} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
+import IMAGES from "./Images/Images";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,56 +10,57 @@ function Navbar() {
       <nav className="bg-white">
         <div className="max-w-7xl mx-auto px-7 sm:px-6 lg:px-8 py-3">
           <div className="flex items-center justify-between h-16">
-            
             {/* image and primary nav starts */}
             <div className="flex items-center mt-6">
               <div className="flex-shrink-0 ">
                 <NavLink to="/">
-                ABC Sweets
+                  <img src={IMAGES.logo1} alt="Logo" width={150} height={50} />
                 </NavLink>
-                
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                 
-
                   <NavLink
                     to="/"
-                    className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
+                    className="text-gray-800 transition duration-300 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
                   >
                     Home
                   </NavLink>
 
-                  
                   <NavLink
                     to="/about"
-                    className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
+                    className="text-gray-800 transition duration-300 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
                   >
                     About us
                   </NavLink>
-                  <NavLink
+                  {/* <NavLink
                     to="/cart"
                     className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
                   >
                     Cart
-                  </NavLink>
+                  </NavLink> */}
                   <NavLink
                     to="/contact"
-                    className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
+                    className="text-gray-800 transition duration-300 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
                   >
                     Contact us
                   </NavLink>
-
-                 
                 </div>
-                
               </div>
-              
             </div>
-            <div className = " hidden  md:flex items-center space-x-3 mt-6 ">
-                <NavLink to="/login" className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg">Login</NavLink>
-                <NavLink to="/signup" className="py-3 px-3  font-medium text-lg  rounded text-white bg-red-500 hover:bg-red-400 hover:text-white  transition duration-300">Sign up</NavLink>
-              </div>
+            <div className=" hidden  md:flex items-center space-x-3 mt-6 ">
+              <NavLink
+                to="/login"
+                className="text-gray-800 hover:text-red-400 transition duration-200 px-3 py-2 rounded-md font-medium text-lg"
+              >
+                Login
+              </NavLink>
+              <NavLink
+                to="/signup"
+                className="py-3 px-3  font-medium text-lg  rounded text-white bg-red-500 hover:bg-red-400 hover:text-white  transition duration-300"
+              >
+                Sign up
+              </NavLink>
+            </div>
             <div className="-mr-2 flex md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -125,8 +127,6 @@ function Navbar() {
                   Home
                 </NavLink>
 
-               
-
                 <NavLink
                   to="/about"
                   className="text-black hover:bg-purple-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -147,17 +147,11 @@ function Navbar() {
                 >
                   Contact us
                 </NavLink>
-                
               </div>
-              
             </div>
           )}
         </Transition>
-        
       </nav>
-
-      
-     
     </div>
   );
 }

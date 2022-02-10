@@ -1,14 +1,14 @@
-import React, { createContext } from 'react'
-import Navbar from './Navbar'
+import React from 'react'
+import Navbar from '../Components/Navbar'
 import {Route} from 'react-router-dom'
 import Signup from './Signup'
 import Home from './Home'
 import About from './About'
-import Bestsellers from './Bestsellers'
+import Bestsellers from '../Components/Bestsellers'
 import Contact from './Contact'
 import Login from './login'
-import Footer from './Footer'
-import Cart from './Cart'
+import Footer from '../Components/Footer'
+import Cart from '../Components/Cart'
 
 
 
@@ -32,7 +32,9 @@ function App() {
       <About />
     </Route>
 
-    <Route path="/cart">
+    
+
+    <Route path="/:id">
       <Cart/>
     </Route>
 

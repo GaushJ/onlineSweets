@@ -1,6 +1,6 @@
 import React from 'react'
-import Carousal from './Carousal'
-import CardTray from './CardTray'
+import Carousal from '../Components/Carousal'
+import CardTray from '../Components/CardTray'
 
 
 const Home= ()=>{
