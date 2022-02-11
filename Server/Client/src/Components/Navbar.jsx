@@ -65,7 +65,7 @@ function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-purple-600 focus:ring-white"
+                className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-white hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-600 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -117,33 +117,33 @@ function Navbar() {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          {(ref) => (
+          {() => (
             <div className="md:hidden" id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <div  className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <NavLink
                   to="/"
-                  className="hover:bg-purple-500 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="hover:bg-red-500 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Home
                 </NavLink>
 
                 <NavLink
                   to="/about"
-                  className="text-black hover:bg-purple-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-black hover:bg-red-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   About us
                 </NavLink>
 
                 <NavLink
                   to="/cart"
-                  className="text-black  hover:bg-purple-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-black  hover:bg-red-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Cart
                 </NavLink>
 
                 <NavLink
                   to="/contact"
-                  className="text-black  hover:bg-purple-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-black  hover:red-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Contact us
                 </NavLink>

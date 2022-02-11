@@ -1,41 +1,55 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Data from "./Data";
-import { useState } from "react";
+import { useState  } from "react";
 
 const Cart = () => {
   const [counter, setCounter] = useState(0);
   // const [decrement , setIncrement] = useState(0);
   const params = useParams();
   const id = params.id
-  console.log(id);
+  let values ;
+  // console.log(id);
 
-const filterSweet = (sweet) => {
-  return sweet === params
-}
+
+  const filterSweet = (sweet) => {
+    for (const categories in Data) {
+      //fetching dynamic data from params
+      values = Data[categories].filter(element => element.id === sweet )
+      if(values.length !== 0){
+        break
+      }
+     
+    }
+
+  }
+  
+  filterSweet(id)
+  console.log(values)
+
   return (
     <>
-      <div className="w-full h-auto mt-8  flex justiy-center">
-        <div className="flex justify-between w-full p-12 relative h-full items-center   ">
+      <div className="w-full h-auto mt-8  flex justify-center">
+        <div className="lg:flex justify-between w-full p-12 relative h-full items-center   ">
 
           {/* Hero Image */}
-          <div className=" w-1/2  p-10">
-            <img src={Data.BestSellers[0].Image} alt="cartitem" className="rounded-2xl" />
+          <div className=" w-full lg:w-1/2  p-4 flex justify-center ">
+            <img src={values[0].Image} alt="cartitem" className="rounded-2xl w-5/6" />
           </div>
 
           {/* Hero Content */}
-          <div className="  w-1/2 h-auto p-4">
+          <div className="  lg:w-1/2 h-auto md:p-16 lg:p-4 flex-col justify-center w-full ">
             {/* Fetching sweet name from params */}
             <div className="flex  justify-center md:text-4xl md:font-light tracking-wider">{params.id}</div>
 
             {/* Price section */}
-            <div className="my-10">
+            <div className="my-10 ">
               <span className="text-xl m-4">Price:</span>
-              <span className="text-xl font-medium ">Rs 400</span>
+              <span className="text-xl font-medium ">Rs {values[0].Price}</span>
               <span>/400g</span>
               <span className="block text-lg mx-4">(Inclusive of all taxes)</span>
               <p className="mt-10 mx-4">
-                Traditional Indian sweet made with milk and topped with nuts<br />
+                {values[0].Description}<br />{/* Traditional Indian sweet made with milk and topped with nuts<br /> */}
                 <span className="font-medium">Disclaimer:</span> Images are for reference purpose only and Haldiram’s reserved the rights for product packaging/size/name change without prior notice
               </p>
             </div>
