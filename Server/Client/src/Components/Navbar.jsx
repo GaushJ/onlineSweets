@@ -32,6 +32,12 @@ function Navbar() {
                   >
                     About us
                   </NavLink>
+                  <NavLink
+                    to="/categories"
+                    className="text-gray-800 transition duration-300 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
+                  >
+                   Categories
+                  </NavLink>
                   {/* <NavLink
                     to="/cart"
                     className="text-gray-800 hover:bg-red-400 hover:text-white px-3 py-2 rounded-md font-medium text-lg"
