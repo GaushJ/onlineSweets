@@ -28,11 +28,11 @@ function App() {
     </Route>
     
     
-    <Route path="/about">
+    <Route exact path="/about">
       <About />
     </Route>
 
-    
+    <Route path="/categories" />
 
     <Route path="/:id">
       <Cart/>
@@ -42,14 +42,14 @@ function App() {
       <Bestsellers />
     </Route>
 
-    <Route path="/contact">
+    <Route exact path="/contact">
       <Contact/>
     </Route>
 
-    <Route path="/signup">
+    <Route exact path="/signup">
       <Signup/>
     </Route> 
-    <Route path="/login">
+    <Route exact path="/login">
       <Login/>
     </Route> 
     
